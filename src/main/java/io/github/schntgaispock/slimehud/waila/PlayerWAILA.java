@@ -68,6 +68,7 @@ public class PlayerWAILA extends BukkitRunnable {
 
         String facing = getFacing();
         if (facing.equals(previousFacing)) {
+            getPlayer().sendMessage("没变");
             return; // Nothing changed, skip for now
         }
 
@@ -95,6 +96,8 @@ public class PlayerWAILA extends BukkitRunnable {
             default:
                 break;
         }
+
+        getPlayer().sendMessage("变了");
 
     }
 
